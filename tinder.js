@@ -6,8 +6,8 @@ const wait = (n = 1) => new Promise((rs, rj) => run ? setTimeout(rs, n) : rj()),
 	};
 document.onkeydown = (e = window.event) => {
 	if (e.key === "a") run = run ? true : explore() || true;
-	else if (e.key === "z") console.log(time_step *= 0.4);
-	else if (e.key === "x") console.log(time_step *= 0.6);
+	else if (e.key === "z") console.log(time_step *= 0.5);
+	else if (e.key === "x") console.log(time_step *= 0.5);
 	else run = false;
 };
 const explore = async () =>
