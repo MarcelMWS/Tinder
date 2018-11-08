@@ -1,4 +1,4 @@
-let run = true, time_step = 100;
+let run = true, time_step = 500;
 const wait = (n = 1) => new Promise((rs, rj) => run ? setTimeout(rs, n) : rj()),
 	click = async (cn, i = 0) => {
 		document.getElementsByClassName(cn)[i].click();
@@ -6,8 +6,8 @@ const wait = (n = 1) => new Promise((rs, rj) => run ? setTimeout(rs, n) : rj()),
 	};
 document.onkeydown = (e = window.event) => {
 	if (e.key === "a") run = run ? true : explore() || true;
-	else if (e.key === "z") console.log(time_step *= 0.1);
-	else if (e.key === "x") console.log(time_step *= 0.1);
+	else if (e.key === "z") console.log(time_step *= 0.4);
+	else if (e.key === "x") console.log(time_step *= 0.6);
 	else run = false;
 };
 const explore = async () =>
